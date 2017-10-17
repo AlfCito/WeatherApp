@@ -1,5 +1,4 @@
 $(document).ready(function($){
-
 	
 	var lat ='';
 	var lon ='';
@@ -21,7 +20,6 @@ $(document).ready(function($){
 			console.log('Error Finding your Location', e);
 		}
 	});
-
 	
 	function weather(weather){
 
@@ -39,13 +37,7 @@ $(document).ready(function($){
 				console.log('error', e);
 			}
 		});
-
-		//$.getJSON("api.openweathermap.org/data/2.5/weather?lat={"+lat+"}&lon={"+lon+"}&appid={"+appKey+"}?callback=weather");
-		
-		//$("#demo").html(weather);
-
-	};
-	
+	};	
 
 });
 

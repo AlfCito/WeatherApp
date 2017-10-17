@@ -1,10 +1,16 @@
-$(function(){
+$(document).ready(function($){
 
 	$.ajax({
 		type: 'GET',
-		url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCFWka7xeWSpSN_RVzKbl0lZyW4rZqOS9A',
+		url: 'https://maps.googleapis.com/maps/api/geocode/output?parameters',
+		//url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCFWka7xeWSpSN_RVzKbl0lZyW4rZqOS9A',
+		crossDomain: true,
+		dataType: 'json',
 		success: function(data){
 			console.log('success', data);
+		},
+		error: function(e){
+			console.log('error', e);
 		}
 	})
 	/*

@@ -27,7 +27,7 @@ $(document).ready(function($){
 
 	var location = $.ajax({
 		type: 'GET',
-		url: "http://ip-api.com/json",
+		url: "https://cors-anywhere.herokuapp.com/http://ip-api.com/json",
 		crossDomain: true,
 		dataType: 'json',
 		success: function(data){

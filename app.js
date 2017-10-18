@@ -1,27 +1,24 @@
 $(document).ready(function($){
 
+	getLocation();
+  
 	var lat = '';
 	var lon = '';
 	var units = 'metric';
 
-	var location = $.ajax({
-		type: 'GET',
-		url: "http://ip-api.com/json",
-		crossDomain: true,
-		dataType: 'json',
-		success: function(data){
-			console.log('success', data);
-		},
-		error: function(e){
-			console.log('Error Finding your Location', e);
-		}
-	});
+	function getLocation() {
+	    if (navigator.geolocation) {
+	      navigator.geolocation.getCurrentPosition(setPosition);
+	    } else { 
+	      alert("Geolocation is not supported by this browser.");
+	    }
+	}
 
-	location.done(function(data){
-		lat = data.lat;
-		lon = data.lon;
-		weather();
-	});
+	function setPosition(position) {
+	    lat = position.coords.latitude;
+	    lon = position.coords.longitude;
+	    weather();
+	}
 	
 	function weather(){
 

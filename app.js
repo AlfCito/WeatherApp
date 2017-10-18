@@ -1,6 +1,13 @@
 $(document).ready(function($){
 
 	getLocation();
+
+	var unsplashPath = "https://api.unsplash.com/photos/";
+	var unsplashID = "/?client_id=0948fb2a7b1a5aebf7b7f7bb8571835a01ac8d35f9e784a1aaf16b8988c031f8";
+
+	var imageID = {
+		"clear sky": "uivWDK2Ifrg", 
+	}
   
 	var lat = '';
 	var lon = '';
@@ -39,13 +46,36 @@ $(document).ready(function($){
 		});
 
 		request.done(function(data){
+			getImage(data);
 			populate(data);
 		});
 	};	
 
-	function populate(data){
+	function getImage(data){
+		var description = data.weather[0].description;
+		var url = unsplashPath + imageID[description] + unsplashID;
 
-		//$("body").css("background", "url("+images.clearSkyNight+")");
+		var requestImage = $.ajax({
+			type: 'GET',
+			url: url,
+			crossDomain: true,
+			dataType: 'json',
+			success: function(data){
+				console.log('success', data);
+				$("body").css("background", "url("+data.urls.regular+")");
+
+				var imageCredits="< Photo by <a href='"+data.user.links.html+"'>"+data.user.name+"</a> / <a href='https://unsplash.com/'>Unsplash ></a>";
+
+				$("footer").html(imageCredits);
+			},
+			error: function(e){
+				console.log('Error Loading Image', e);
+			},
+
+		});
+	}
+
+	function populate(data){
 
 		$("#demo").empty();
 		$("#demo").append(data.name);

@@ -1,26 +1,5 @@
 $(document).ready(function($){
 
-	var images = {
-		"clearSkyDay": 			"https://unsplash.com/photos/uivWDK2Ifrg",
-		"clearSkyNight": 			"https://unsplash.com/photos/weuWmzv7xnU",
-		"fewCloudsDay" : 			"https://unsplash.com/photos/f5_lfi2S-d4",
-		"fewCloudsNight" : 		"https://unsplash.com/photos/w8yLxjJVn4U",
-		"scatteredCloudsDay" : 	"",
-		"scatteredCloudsNight" : 	"",
-		"broken-clouds-day" : 		"",
-		"broken-clouds-night" : 	"",
-		"shower-rain-day" : 		"",
-		"shower-rain-night" : 		"",
-		"rain-day" : 				"",
-		"rain-night" : 				"",
-		"thunderstorm-day" : 		"",
-		"thunderstorm-night" : 		"",
-		"snow-day" : 				"",
-		"snow-night" : 				"",
-		"mist-day" : 				"",
-		"mist-night" : 				""
-	}
-	
 	var lat = '';
 	var lon = '';
 	var units = 'metric';
@@ -69,7 +48,7 @@ $(document).ready(function($){
 
 	function populate(data){
 
-		$("body").css("background", "url("+images.clearSkyNight+")");
+		//$("body").css("background", "url("+images.clearSkyNight+")");
 
 		$("#demo").empty();
 		$("#demo").append(data.name);

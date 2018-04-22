@@ -1,6 +1,24 @@
 body{
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+ 	height: 100vh;
+ 	background-position: center;
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+}
+
+#main-col{
+	height: 100vh;
+}
+
+.owf{
+	font-size: 60px;
+}
+
+#description{
+	text-transform: uppercase;
+}
+
+#temperature{
+	font-size: 60px;
+	margin-top: 12px;
+	margin-bottom: 24px;
 }

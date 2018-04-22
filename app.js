@@ -83,9 +83,9 @@ $(document).ready(function($){
 				console.log('success', data);
 				$("body").css("background-image", "url("+data.urls.full+")");
 
-				var imageCredits="< Photo by <a href='"+data.user.links.html+"'>"+data.user.name+"</a> / <a href='https://unsplash.com/'>Unsplash ></a>";
+				var imageCredits="Photo by <a target='_blank' href='"+data.user.links.html+"'>"+data.user.name+"</a> / <a target='_blank' href='https://unsplash.com/'>Unsplash</a>";
 
-				$("footer").html(imageCredits);
+				$("#img-credits").html(imageCredits);
 			},
 			error: function(e){
 				console.log('Error Loading Image', e);
@@ -96,23 +96,27 @@ $(document).ready(function($){
 
 	function populate(data){
 
-		$("#demo").empty();
-		$("#demo").append(data.name);
-		$("#demo").append('<br>');
-		$("#demo").append('Temperature: ');
-		$("#demo").append(data.main.temp);
-		$("#demo").append(' Degrees');
-		$("#demo").append('<br>');
-		$("#demo").append(data.weather[0].main);
-		$("#demo").append('<br>');
-		$("#demo").append(data.weather[0].description);
-		$("#demo").append('<br>');
+		//reset
+		$("#temperature").empty();
+		$("#card-title").empty();
+		$("#weather-icon").empty();
+		$("#description").empty();
+
+		$("#card-title").append(data.name);
+		$("#description").append(data.weather[0].description);
+		$("#temperature").append(data.main.temp);
+
+		if(units === 'metric'){
+			$("#temperature").append(' °C');
+		}else if ( units === 'imperial' ){
+			$("#temperature").append(' °F');
+		}
 
 		var iconImgCode = data.weather[0].icon;
 		var iconTime = iconImgCode[iconImgCode.length-1];
 
 		var icon = '<i class="owf owf-'+data.weather[0].id+'-'+iconTime+'"></i>'
-		$("#demo").append(icon);
+		$("#weather-icon").append(icon);
 	}
 
 	$("#celsius").click(function(){

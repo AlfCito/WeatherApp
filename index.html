@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Weather App</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/owfont-regular.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	
@@ -12,13 +13,25 @@
 
 </head>
 <body>
-
-<div id="demo"></div>
-<div>
-	<button id="celsius">Celsius</button>
-	<button id="fahrenheit">Fahrenheit </button>
+<div class="container">
+	<div id="main-col" class="row justify-content-center align-items-center">
+		<div class="col-sm-1 col-md-6 col-lg-4">
+			<div class="card text-center border-light mb-3">
+				<h4 id="card-title" class="card-header"></h4>
+				<div class="card-body">					
+					<div id="weather-icon"></div>
+					<div id="description"></div>
+					<div id="temperature"></div>
+					<button type="button" class="btn btn-primary" id="celsius">Celsius</button>
+					<button type="button" class="btn btn-primary" id="fahrenheit">Fahrenheit </button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<footer></footer>
+<footer class="fixed-bottom d-block p-2 bg-dark text-white">
+	<div id="img-credits"></div>
+</footer>
 
 </body>
 </html>

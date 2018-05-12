@@ -8,23 +8,25 @@ $(document).ready(function($){
 	// Store all the ID of the images that represent the different weather options
 	var imageID = {
 		"clear skyd": 			"uivWDK2Ifrg", 
-	    "clear skyn": 			"j-F6OVhR3mU",
-	    "few cloudsd": 			"oyrtK2hJqBY",
-	    "few cloudsn": 			"R2HlismuruI",
-	    "scattered cloudsd" : 	"R6KyoSRvQTk",
-	    "scattered cloudsn" : 	"G3EDWxWJXpI",
-	    "broken cloudsd" : 		"x7whfPFXzxI",
-	    "broken cloudsn" : 		"h_gwdi8UH2o",
-	    "shower raind" : 		"Kwi60PbAM9I",
-	    "shower rainn" : 		"wy0CiGoYiKE",
-	    "raind" : 				"mYOea-xnu-k",
-	    "rainn" : 				"5s1pIwDi8eA",
-	    "thunderstormd" : 		"dg5KvcVv7tU",
-	    "thunderstormn" : 		"vmvlzJz1lHg",
-	    "snowd" : 				"VMphSM-RqBo",
-	    "snown" : 				"yHLTI3zwydg",
-	    "mistd" : 				"QDPo00WyGXg",
-	    "mistn" : 				"jGN7JUKZcU0"
+	   	"clear skyn": 			"j-F6OVhR3mU",
+	    	"few cloudsd": 			"oyrtK2hJqBY",
+	    	"few cloudsn": 			"R2HlismuruI",
+	    	"scattered cloudsd" : 		"R6KyoSRvQTk",
+	    	"scattered cloudsn" : 		"G3EDWxWJXpI",
+	    	"overcast cloudsd" : 		"R6KyoSRvQTk", // find new image
+      	    	"overcast cloudsn" : 		"G3EDWxWJXpI", // find new image
+	    	"broken cloudsd" : 		"x7whfPFXzxI",
+	    	"broken cloudsn" : 		"h_gwdi8UH2o",
+	    	"shower raind" : 		"Kwi60PbAM9I",
+	    	"shower rainn" : 		"wy0CiGoYiKE",
+	    	"raind" : 			"mYOea-xnu-k",
+	    	"rainn" : 			"5s1pIwDi8eA",
+	    	"thunderstormd" : 		"dg5KvcVv7tU",
+	    	"thunderstormn" : 		"vmvlzJz1lHg",
+	    	"snowd" : 			"VMphSM-RqBo",
+	    	"snown" : 			"yHLTI3zwydg",
+	    	"mistd" : 			"QDPo00WyGXg",
+	    	"mistn" : 			"jGN7JUKZcU0"
 	}
   
 	var lat = '';

@@ -13,8 +13,8 @@ $(document).ready(function($){
 	    	"few cloudsn": 			"R2HlismuruI",
 	    	"scattered cloudsd" : 		"R6KyoSRvQTk",
 	    	"scattered cloudsn" : 		"G3EDWxWJXpI",
-	    	"overcast cloudsd" : 		"R6KyoSRvQTk", // find new image
-      	    	"overcast cloudsn" : 		"G3EDWxWJXpI", // find new image
+	    	"overcast cloudsd" : 		"LZfpD7ckSOE",
+      	    	"overcast cloudsn" : 		"Ta9_HNeuQkU",
 	    	"broken cloudsd" : 		"x7whfPFXzxI",
 	    	"broken cloudsn" : 		"h_gwdi8UH2o",
 	    	"shower raind" : 		"Kwi60PbAM9I",

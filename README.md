@@ -1,3 +1,3 @@
 # WeatherApp
 Frecodecamp Local Weather App
-https://alfcito.github.io/WeatherApp/
+https://eddieyepez.github.io/WeatherApp/
